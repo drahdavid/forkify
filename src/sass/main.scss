@@ -1,0 +1,52 @@
+@import "base";
+@import "components";
+@import "header";
+@import "preview";
+@import "searchResults";
+@import "recipe";
+@import "upload";
+.input-succ-p {
+    display: inline-block;
+    color: green;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.input-err-p {
+    display: inline-block;
+    color: rgb(128, 0, 0);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.inp-succ {
+    border: solid 1px green;
+    background-color: rgba(0, 255, 0, 0.194);
+}
+.inp-succ:focus {
+    border: solid 1px rgba(0, 128, 0, 0.352) !important ;
+    background-color: rgba(0, 255, 0, 0.153);
+}
+
+.upload__column-2 p {
+    display: inline-block;
+}
+.upload__column-2 {
+    display: flex;
+    flex-direction: column;
+}
+.upload__column-2 input {
+    width: 320px;
+}
+
+.upload__column-2 div {
+    margin-bottom: 10px;
+}
+
+.btn-upload-disabled {
+    filter: opacity(60%);
+}
+
+.btn--inline {
+    background-color: rgba(150, 194, 150, 0);
+    border: none;
+}
