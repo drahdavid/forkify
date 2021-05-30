@@ -12,9 +12,9 @@ export default class View {
     const markup = this._generateMarkup(); // "markup" será un HTML generado por la función #generateMarkup.
 
 
-    if (!render) return markup; 
+    if (!render) return markup;
 
-  
+
 
     this._clear(); // Limpia Mensajes por Default del Contenedor de búsqueda de recetas. 
 
