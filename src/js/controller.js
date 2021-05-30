@@ -1,10 +1,10 @@
-import * as model from './model'; // Importamos todo lo exportado de model 
-import recipeView from './views/recipeView'; // importamos el Objeto creado a partir de la clase RecipView
-import searchView from './views/searchView';
-import resultsView from './views/resultsView'
-import paginationView from './views/paginationView';
-import bookMarksView from './views/bookMarksView';
-import addRecipeView from './views/addRecipeView';
+import * as model from './model.js'; // Importamos todo lo exportado de model 
+import recipeView from './views/recipeView.js'; // importamos el Objeto creado a partir de la clase RecipView
+import searchView from './views/searchView.js';
+import resultsView from './views/resultsView.js'
+import paginationView from './views/paginationView.js';
+import bookMarksView from './views/bookMarksView.js';
+import addRecipeView from './views/addRecipeView.js';
 
 
 import 'core-js/stable'; // Importamos Pollyfilling para que funcionen sintaxis modernas

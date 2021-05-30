@@ -2,9 +2,9 @@
 
 // import { from } from "core-js/core/array";
 import { async } from "regenerator-runtime";
-import { API_URL, RES_PER_PAGE, KEY } from './config';
+import { API_URL, RES_PER_PAGE, KEY } from './config.js';
 // import { getJSON, sendJSON } from './helpers.js';
-import { AJAX } from './helpers';
+import { AJAX } from './helpers.js';
 
 
 
