@@ -6,20 +6,9 @@ import paginationView from './views/paginationView.js';
 import bookMarksView from './views/bookMarksView.js';
 import addRecipeView from './views/addRecipeView.js';
 
-
 import 'core-js/stable'; // Importamos Pollyfilling para que funcionen sintaxis modernas
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
-
-
-
-
-
-// https://forkify-api.herokuapp.com/v2
-
-///////////////////////////////////////
-
-
 
 const controlRecipes = async function () {
   try {
@@ -157,8 +146,8 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('hola'); 
-  console.log('hola'); 
+  console.log('hola');
+  console.log('hola');
 
 }
 init();

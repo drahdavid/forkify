@@ -1,6 +1,3 @@
-// EN EL MODELO PREPARAMOS LOS DATOS QUE UTILIZAREMOS. 
-
-// import { from } from "core-js/core/array";
 import { async } from "regenerator-runtime";
 import { API_URL, RES_PER_PAGE, KEY } from './config.js';
 // import { getJSON, sendJSON } from './helpers.js';

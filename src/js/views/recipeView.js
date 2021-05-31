@@ -1,8 +1,7 @@
-// ES IMPORTANTE SABER QUE NADA SE EJECUTA DIRECTAMENTE EN LAS VISTAS, SINO QUE SE EXPORTA PARA QUE EL CONTROLADOR LO EJECUTE. 
+import View from './View.js';
 
 import icons from 'url:../../img/icons.svg';  // De esta manera importamos archivos estáticos para que funcionen en PARCEL  
 import { Fraction } from 'fractional'; // Librería para trabajar con fracciones 
-import View from './View.js';
 
 // Creamos una Clase para las Vistas de las Recetas
 class RecipeView extends View {
