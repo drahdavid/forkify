@@ -39,9 +39,11 @@ class AddRecipeView extends View {
 
                     e.target.nextElementSibling.remove();
                     _upload__btn.classList.remove('btn-upload-disabled');
+                    _upload__btn.toggleAttribute('disabled', false);
                 }
 
                 if (regExp.test(el.value)) {
+
                     _upload__btn.toggleAttribute('disabled', false);
                     if (e.target.nextElementSibling.matches(".input-err-p")) e.target.nextElementSibling.remove();
 
@@ -55,6 +57,7 @@ class AddRecipeView extends View {
                     _upload__btn.classList.remove('btn-upload-disabled');
                 }
                 if (!regExp.test(el.value) && el.value !== '') {
+
                     _upload__btn.toggleAttribute('disabled', true);
                     _upload__btn.classList.add('btn-upload-disabled');
 

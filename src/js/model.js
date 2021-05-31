@@ -151,7 +151,7 @@ const clearBookmarks = function () {
 export const uploadRecipe = async function (newRecipe) {
     // console.log(Object.entries(newRecipe)) // Transformamos el Objeto descompuesto en un array Pares Clave Valor
     try {
-        
+
         const ingredients = Object.entries(newRecipe)
             .filter(entry => entry[0].startsWith('ingr') && entry[1] !== '')
             .map(ing => {
@@ -163,7 +163,7 @@ export const uploadRecipe = async function (newRecipe) {
                 if (ingrArr.length !== 3) throw new Error('Wrong Ingredient Format, please use the correct one');
 
                 const [quantity, unit, description] = ingrArr;
-
+                console.log(newRecipe);
                 return { quantity: quantity ? +quantity : null, unit, description };
             });
 
@@ -172,8 +172,8 @@ export const uploadRecipe = async function (newRecipe) {
             source_url: newRecipe.sourceUrl,
             image_url: newRecipe.image,
             publisher: newRecipe.publisher,
-            cooking_time: + newRecipe.cookingTime,
-            servings: + newRecipe.servings,
+            cooking_time: +newRecipe.cookingTime,
+            servings: +newRecipe.servings,
             ingredients
         };
         console.log(recipe);

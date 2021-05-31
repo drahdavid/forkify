@@ -4,8 +4,8 @@ import icons from 'url:../../img/icons.svg';
 
 class BookMarksView extends View {
   _parentElement = document.querySelector('.bookmarks__list');
-  _errorMessage = "No recipes found for your query. Please try againaaaa :)";
-  _successMessage = "Hola";
+  _errorMessage = "No bookmarks yet :)";
+  _successMessage = "";
 
   addHandlerRender(handler) {
     window.addEventListener('load', handler);
