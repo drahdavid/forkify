@@ -1,9 +1,9 @@
 import * as model from './model.js'; // Importamos todo lo exportado de model 
-import recipeView from './views/recipeView.js'; // importamos el Objeto creado a partir de la clase RecipView
+import recipeView from './views/recipeView.js';
 import searchView from './views/searchView.js';
-import resultsView from './views/resultsView.js'
+import resultsView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
-import bookMarksView from './views/bookMarksView.js';
+import bookmarksView from './views/bookmarksView.js';
 import addRecipeView from './views/addRecipeView.js';
 
 import 'core-js/stable'; // Importamos Pollyfilling para que funcionen sintaxis modernas
@@ -24,7 +24,7 @@ const controlRecipes = async function () {
     resultsView.update(model.getSearchResultsPage());
 
 
-    bookMarksView.update(model.state.bookMarks);
+    bookmarksView.update(model.state.bookMarks);
     // 1. Modificación del estado de Receta 
     await model.loadRecipe(id); // Llamada a la API , búsqueda de receta con id sacado de barra de navegación. 
 
@@ -87,18 +87,18 @@ const controlAddBookmark = function () {
 
   // Actualizar Vistas de recetas
   recipeView.update(model.state.recipe);
-  bookMarksView.render(model.state.bookMarks);
+  bookmarksView.render(model.state.bookMarks);
 
   // Cambiar ID en la URL
   window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
   // Renderizar BookMarks
-  // bookMarksView.render(model.state.bookMarks);
+  // bookmarksView.render(model.state.bookMarks);
 
 };
 
 const renderBookMarks = function () {
-  bookMarksView.render(model.state.bookMarks);
+  bookmarksView.render(model.state.bookMarks);
 };
 
 const controlAddRecipe = async function (newRecipe) {
@@ -117,7 +117,7 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderMessage();
 
     //Renderizar  la vista de Favoritos
-    bookMarksView.render(model.state.bookMarks);
+    bookmarksView.render(model.state.bookMarks);
 
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
@@ -139,7 +139,7 @@ const controlAddRecipe = async function (newRecipe) {
 
 // SUSCRIPTOR: Event Handler en el COntrolador. 
 const init = function () {
-  bookMarksView.addHandlerRender(renderBookMarks);
+  bookmarksView.addHandlerRender(renderBookMarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark)
